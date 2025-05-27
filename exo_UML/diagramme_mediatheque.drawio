@@ -1,0 +1,75 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36" version="27.0.9">
+  <diagram name="Page-1" id="-SP2SwpjPdNcJweobuhE">
+    <mxGraphModel dx="1133" dy="661" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="wghtI-xwdSZSfK_PJ7_4-12" value="" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wghtI-xwdSZSfK_PJ7_4-1" target="wghtI-xwdSZSfK_PJ7_4-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wghtI-xwdSZSfK_PJ7_4-15" value="" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wghtI-xwdSZSfK_PJ7_4-1" target="wghtI-xwdSZSfK_PJ7_4-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wghtI-xwdSZSfK_PJ7_4-1" value="Abonné&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="160" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wghtI-xwdSZSfK_PJ7_4-17" value="" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wghtI-xwdSZSfK_PJ7_4-2" target="wghtI-xwdSZSfK_PJ7_4-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wghtI-xwdSZSfK_PJ7_4-19" value="" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wghtI-xwdSZSfK_PJ7_4-2" target="wghtI-xwdSZSfK_PJ7_4-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wghtI-xwdSZSfK_PJ7_4-22" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="wghtI-xwdSZSfK_PJ7_4-2" target="wghtI-xwdSZSfK_PJ7_4-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wghtI-xwdSZSfK_PJ7_4-24" value="" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wghtI-xwdSZSfK_PJ7_4-2" target="wghtI-xwdSZSfK_PJ7_4-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wghtI-xwdSZSfK_PJ7_4-2" value="Employé" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="250" y="370" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wghtI-xwdSZSfK_PJ7_4-21" value="" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wghtI-xwdSZSfK_PJ7_4-3" target="wghtI-xwdSZSfK_PJ7_4-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wghtI-xwdSZSfK_PJ7_4-3" value="Bénévole" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="570" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wghtI-xwdSZSfK_PJ7_4-6" value="Personnel" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="370" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wghtI-xwdSZSfK_PJ7_4-10" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=block;endFill=0;" edge="1" parent="1" source="wghtI-xwdSZSfK_PJ7_4-6" target="wghtI-xwdSZSfK_PJ7_4-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wghtI-xwdSZSfK_PJ7_4-11" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;Consulter la liste des documents" style="ellipse;whiteSpace=wrap;html=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="300" y="80" width="125" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="wghtI-xwdSZSfK_PJ7_4-14" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Réaliser un emprunt&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="330" y="170" width="110" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="wghtI-xwdSZSfK_PJ7_4-16" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;Enregistrer un emprunt" style="ellipse;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="500" y="210" width="100" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="wghtI-xwdSZSfK_PJ7_4-18" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;Réaliser inscription nouveaux abonnés" style="ellipse;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="580" y="300" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="wghtI-xwdSZSfK_PJ7_4-20" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;Prêt de documents aux abonnés" style="ellipse;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="550" y="545" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wghtI-xwdSZSfK_PJ7_4-26" value="" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="wghtI-xwdSZSfK_PJ7_4-23" target="wghtI-xwdSZSfK_PJ7_4-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wghtI-xwdSZSfK_PJ7_4-27" value="extend" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="wghtI-xwdSZSfK_PJ7_4-26">
+          <mxGeometry x="-0.1509" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wghtI-xwdSZSfK_PJ7_4-23" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;Consulter&lt;div&gt;états des abonnés&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="590" y="400" width="110" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wghtI-xwdSZSfK_PJ7_4-25" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;Relancer les abonnés" style="ellipse;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="820" y="400" width="80" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
