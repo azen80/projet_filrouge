@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>section { margin:20px; }</style>
 </head>
 <body>
     <section><form action="http://bienvu.net/script.php" method="get">
@@ -12,8 +13,54 @@
        </form>
     </section>
 
-    <section>
+    <form action="http://bienvu.net/script.php" method="get">
+        <section>
+            <h1><B>Nous lançons une grande enquête sur les anciens stagiaires</B></h1>
+            <fieldset>
+                <legend>Vos coordonnées</legend>
+                votre nom <input type="text" name="nom"><br>
+                votre prénom <input type="text" name="prenom"><br>
+                votre date de naissance <input type="text" name="datenaissance"><br>
+                votre adresse <input type="text" name="adresse"><br>
+                votre ville <input type="text" name="ville"><br>
+                votre code postal <input type="text" name="codepostal"><br>
+                votre e-mail <input type="text" name="email"><br>
+            </fieldset>
+        </section>
+        <section>
+            <fieldset>
+                vous êtes un homme <input type="radio" name="sexe1" value="Homme"> 
+                vous êtes une femme <input type="radio" name="sexe1" value="Femme"> 
+            </fieldset>
+        </section>
+            
+        <section>
+            <select name="metier">
+                <option value="dev"> développeur</option>
+            </select>
+            <p>si vous avez répondu autre, précisez <input type="text"></p> 
+        </section>
+    
+        <section>
+            <select name="revenu">
+                <option value="1000"> &lt;1000€ </option>
+            </select>
+            <p>en quelle année avez-vous suivi le stage afpa ? <input type="text"></p>
+        </section>
+    
+        <section>
+            <textarea rows="5" cols="30" placeholder="vos commentaires" name="commentaire"></textarea>
+            <p><b>merci d'avoir répondu au questionnaire</b></p>
+        </section>
+    
+        <section>
+            <button class="btn validez">validez</button>
+            <button class="btn annulez">annulez</button>
+        </section>
+    </form>
+    
         
-    </section>
+        
+    
 </body>
 </html>
