@@ -1,0 +1,8 @@
+Emprunter une ressource
+L'abonné se présente au guichet en spécifiant les documents qu'il souhaite emprunter, muni de sa carte.
+L'employé enregistre l'emprunt sur un formulaire du système en spécifiant le numéro de l'abonné, la cote du document et la date de l'emprunt.
+
+
+---------
+Si l'abonné a déjà 5 emprunts OU s'il n'a pas réglé sa cotisation
+Le système renvoie un message d'erreur selon le cas
