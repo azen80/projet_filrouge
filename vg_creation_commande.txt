@@ -1,0 +1,18 @@
+Création commande
+Le client consulte le catalogue des produits et clique sur un produit afin d'avoir + d'informations.
+Le système envoie une page dédiée à ce produit.
+
+Le client peut désormais cliquer sur "ajouter au panier", puis sur "voir le panier" lorsqu'il a fini.
+Le système envoie une page où tous ses produits sont listés, ainsi que le total d'euros.
+
+Le client peut cliquer sur "passer la commande".
+Le système envoie une page où le client peut inscrire ses coordonnées etc..
+
+
+------------
+Si le client a sélectionné un produit qui n'existe plus
+Le système envoie un message d'erreur "Le produit n'est plus disponible"
+
+Si le client a mal entré ses coordonnées (manque d'adresse, de mail, etc)
+Le système envoie un message d'erreur "Veuillez remplir le champ concerné"
+
