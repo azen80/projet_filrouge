@@ -1,4 +1,7 @@
 Création commande
+Le client s'inscrit (ou se connecte) en cliquant sur "Connexion"
+Le système envoie une page avec un formulaire permettant de se connecter, ou de s'inscrire.
+
 Le client consulte le catalogue des produits et clique sur un produit afin d'avoir + d'informations.
 Le système envoie une page dédiée à ce produit.
 
@@ -7,6 +10,7 @@ Le système envoie une page où tous ses produits sont listés, ainsi que le tot
 
 Le client peut cliquer sur "passer la commande".
 Le système envoie une page où le client peut inscrire ses coordonnées etc..
+
 
 
 ------------
