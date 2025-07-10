@@ -5,7 +5,7 @@ services:
       ports:
         - "8000:8000"
       volumes:
-        - ./symfony_docker:/var/www
+        - .:/var/www
       extra_hosts:
         - host.docker.internal:host-gateway
   db:
@@ -13,14 +13,18 @@ services:
       restart: always
       environment:
         MYSQL_ROOT_PASSWORD: Afpa1234
-
-  phpmyadmin: 
-      image: phpmyadmin
-      restart: always
       ports:
-        - "8080:80"
-      environment:
-        - PMA_ARBITRARY=1
+        - "3307:3306"
+      volumes:
+      - mariadb_data:/var/lib/mysql
+
+ # phpmyadmin: 
+ #     image: phpmyadmin
+ #     restart: always
+ #     ports:
+ #       - "8080:80"
+ #     environment:
+ #       - PMA_ARBITRARY=1
 
   mailhog:
       image: mailhog/mailhog:latest
@@ -28,3 +32,6 @@ services:
       ports:
         - "1025:1025"
         - "8025:8025"
+     
+volumes: 
+  mariadb_data:
