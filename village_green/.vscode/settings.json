@@ -1,3 +1,6 @@
 {
-    "dbcode.connections": []
+    "dbcode.connections": [],
+    "emmet.includeLanguages": {
+        "twig": "html"
+    }
 }
