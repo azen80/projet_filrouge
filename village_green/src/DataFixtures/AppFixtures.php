@@ -3,6 +3,7 @@
 namespace App\DataFixtures;
 
 use App\Entity\Rubrique;
+use App\Entity\SousRubrique;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 
@@ -13,6 +14,14 @@ class AppFixtures extends Fixture
         $r1 = new Rubrique();
         $r1->setNomRubrique("Guitares");
         $manager->persist($r1);
+
+
+        $sr1 = new SousRubrique();
+        $sr1->setNomSousRubrique("Guitares électriques");
+        $r1->addSousRubrique($sr1);
+        $sr1->setRubrique($r1);
+        $manager->persist($sr1);
+
 
 
         $r2 = new Rubrique();
