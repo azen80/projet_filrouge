@@ -2,6 +2,8 @@
 
 namespace App\DataFixtures;
 
+use App\Entity\Fournisseur;
+use App\Entity\Produit;
 use App\Entity\Rubrique;
 use App\Entity\SousRubrique;
 use Doctrine\Bundle\FixturesBundle\Fixture;
@@ -11,16 +13,59 @@ class AppFixtures extends Fixture
 {
     public function load(ObjectManager $manager): void
     {
+        $f1 = new Fournisseur();
+        $f1->setNom("Yamaha");
+        $manager->persist($f1);
+
+
         $r1 = new Rubrique();
         $r1->setNomRubrique("Guitares");
         $manager->persist($r1);
+
+        $r2 = new Rubrique();
+        $r2->setNomRubrique("Claviers");
+        $manager->persist($r2);
+
+        $r3 = new Rubrique();
+        $r3->setNomRubrique("Pianos");
+        $manager->persist($r3);
+
+        $r4 = new Rubrique();
+        $r4->setNomRubrique("Flutes");
+        $manager->persist($r4);
+
+        $r5 = new Rubrique();
+        $r5->setNomRubrique("Batteries");
+        $manager->persist($r5);
+
+        $r6 = new Rubrique();
+        $r6->setNomRubrique("Accordéons");
+        $manager->persist($r6);
+
+        $r7 = new Rubrique();
+        $r7->setNomRubrique("Harmonica");
+        $manager->persist($r7);
+
+
 
 
         $sr1 = new SousRubrique();
         $sr1->setNomSousRubrique("Guitares électriques");
         $r1->addSousRubrique($sr1);
-        $sr1->setRubrique($r1);
         $manager->persist($sr1);
+
+
+        $p1 = new Produit();
+        $p1->setLibelleCourt("Guitare qui brille");
+        $p1->setDescription("...");
+        $p1->setPrixAchat(12.45);
+        $sr1->addProduit($p1);
+        $f1->addProduit($p1);
+        $manager->persist($p1);
+
+
+
+
 
 
 

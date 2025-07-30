@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\RubriqueRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
@@ -9,10 +10,13 @@ use Symfony\Component\Routing\Attribute\Route;
 final class AccueilController extends AbstractController
 {
     #[Route('/', name: 'app_accueil')]
-    public function accueil(): Response
+    public function accueil(RubriqueRepository $repo): Response
     {
+        $rubriques = $repo->findAll();
+
         return $this->render('accueil/index.html.twig', [
             'controller_name' => 'AccueilController',
+            "rubriques" => $rubriques
         ]);
     }
 
