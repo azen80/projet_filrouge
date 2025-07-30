@@ -4,4 +4,17 @@
 
 {% block body %}
 <h1>Accueil</h1>
+
+
+<div class="container">
+    <div class="row">
+        {% for rubrique in rubriques %}
+            
+            <div class="col-12">
+                {{ rubrique.nomRubrique }}
+            </div>
+            
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}

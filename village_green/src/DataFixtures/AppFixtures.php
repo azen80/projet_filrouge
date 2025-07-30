@@ -65,15 +65,6 @@ class AppFixtures extends Fixture
 
 
 
-
-
-
-
-        $r2 = new Rubrique();
-        $r2->setNomRubrique("Claviers");
-        $manager->persist($r2);
-
-
         $manager->flush();
     }
 }
