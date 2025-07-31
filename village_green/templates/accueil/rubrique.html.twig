@@ -3,12 +3,12 @@
 {% block title %}Hello AccueilController!{% endblock %}
 
 {% block body %}
-<h1>Accueil</h1>
+<h1>{{rubrique.nomRubrique}}</h1>
 
 
 <div class="container">
     <div class="row">
-        {% for rubrique in rubriques %}
+        {% for sousRubrique in rubrique.sousRubriques %}
             
                 <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-2 rubrique mt-3">
                     <a href="/rubrique/{{ rubrique.id }}">

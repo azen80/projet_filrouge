@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Rubrique;
 use App\Repository\RubriqueRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -19,6 +20,21 @@ final class AccueilController extends AbstractController
             "rubriques" => $rubriques
         ]);
     }
+
+
+    #[Route('/rubrique/{rubrique}', name: 'app_rubrique')]
+    public function rubrique(Rubrique $rubrique): Response
+    {
+        // dd($rubrique);
+
+        return $this->render('accueil/rubrique.html.twig', [
+            'controller_name' => 'AccueilController',
+            'rubrique' => $rubrique
+        ]);
+    }
+
+
+
 
     #[Route('/contact', name: 'app_contact')]
     public function contact(): Response
