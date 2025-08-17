@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AccueilController!{% endblock %}
+
+{% block body %}
+<h1>{{produit.libelleCourt}}</h1>
+
+
+<div class="container">
+    <div class="row">
+        <div>
+            {{ produit.photo }}
+        </div>
+
+        <div>
+            {{ produit.description }}
+        </div>
+
+        <div>
+            {{ produit.prixAchat }}
+        </div>
+    </div>
+</div>
+{% endblock %}

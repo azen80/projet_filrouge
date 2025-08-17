@@ -11,9 +11,9 @@
         {% for sousRubrique in rubrique.sousRubriques %}
             
                 <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-2 rubrique mt-3">
-                    <a href="/rubrique/{{ rubrique.id }}">
-                        <img src="{{rubrique.photo}}" alt="">
-                        {{ rubrique.nomRubrique }}
+                    <a href="/produits/{{ sousRubrique.id }}">
+                        <img src="{{sousRubrique.photo}}" alt="">
+                        {{ sousRubrique.nomSousRubrique }}
                     </a>
                 </div>
             

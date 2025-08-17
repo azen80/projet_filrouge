@@ -80,6 +80,21 @@ class AppFixtures extends Fixture
         $f1->addProduit($p1);
         $manager->persist($p1);
 
+        $p2 = new Produit();
+        $p2->setLibelleCourt("Guitare qui joue vite");
+        $p2->setDescription("...");
+        $p2->setPrixAchat(12.45);
+        $sr1->addProduit($p2);
+        $f1->addProduit($p2);
+        $manager->persist($p2);
+
+        $p3 = new Produit();
+        $p3->setLibelleCourt("Guitare qui joue fort");
+        $p3->setDescription("...");
+        $p3->setPrixAchat(12.45);
+        $sr1->addProduit($p3);
+        $f1->addProduit($p3);
+        $manager->persist($p3);
 
 
         $manager->flush();
