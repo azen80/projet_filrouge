@@ -36,11 +36,11 @@ final class AccueilController extends AbstractController
     }
 
 
-     #[Route('/produits/{sousRubrique}', name: 'app_produits')]
-    public function produits(SousRubrique $sousRubrique): Response
+     #[Route('/sousrubrique/{sousRubrique}', name: 'app_sousrbrique')]
+    public function sousRubrique(SousRubrique $sousRubrique): Response
     {
 
-        return $this->render('accueil/produits.html.twig', [
+        return $this->render('accueil/sousrubrique.html.twig', [
             'controller_name' => 'AccueilController',
             'sousRubrique' => $sousRubrique
         ]);

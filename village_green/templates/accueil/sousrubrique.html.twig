@@ -5,21 +5,23 @@
 {% block body %}
 
 
+
         <div class="col-12 mt-3">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="/">Accueil</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">{{rubrique.nomRubrique}}</li>
+                    <li class="breadcrumb-item"><a href="/rubrique/{{sousRubrique.rubrique.id}}"> {{ sousRubrique.rubrique.nomRubrique }}</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{{sousRubrique.nomsousRubrique}}</li>
                 </ol>
             </nav>
         </div>
         
 
-<h1>{{ rubrique.nomRubrique }}</h1>
+<h1>{{ sousRubrique.nomsousRubrique }}</h1>
 
-        {% for sousRubrique in rubrique.sousRubriques %}
+        {% for produit in sousRubrique.produits %}
             <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-2 rubrique mt-3">
-                <a href="/sousrubrique/{{ sousRubrique.id }}">
+                <a href="/produit/{{ produit.id }}">
                         <div class="card" style="">
                             <img class="card-img-top img-fluid" src="https://picsum.photos/id/{{sousRubrique.id+50}}/400/200" alt="Card image cap">
                             <div class="card-body">
