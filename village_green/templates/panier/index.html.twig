@@ -14,8 +14,8 @@
         {{ elt.produit.libelleCourt }}
         <br>
         {{ elt.quantite }}
-        <a href="/panier/add/{{ elt.produit.id }}">++</a>
-        <a href="/panier/del/{{ elt.produit.id }}">--</a>
+        <a class="btn btn-primary" href="/panier/add/{{ elt.produit.id }}">++</a>
+        <a class="btn btn-primary" href="/panier/del/{{ elt.produit.id }}">--</a>
         </div>
         
     {% endfor %}

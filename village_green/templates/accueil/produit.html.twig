@@ -23,9 +23,19 @@
 
 <div class="container">
     <div class="row">
-        <div>
+       {# <div>
            <img src="{{ asset(produit.photo) }}" alt="{{ produit.libelleCourt}}" class="img-fluid produit-image">
         </div>
+        #}
+              <div class="col-12 col-md-6">
+        {# -- Fallback image : jamais de null dans asset() -- #}
+        {% set photo = produit.photo ?? '' %}
+        {% set src = photo
+          ? (photo starts with 'uploads/' ? asset(photo) : asset('uploads/produits/' ~ photo))
+          : asset('images/placeholder.png')
+        %}
+        <img class="img-fluid produit-image" src="{{ src }}" alt="{{ produit.libelleCourt }}">
+      </div>
 
         <div>
             {{ produit.description }}
@@ -37,4 +47,12 @@
         <a href="/panier/add/{{produit.id}}">Ajouter au panier</a>
     </div>
 </div>
+
+<form method="post"
+      action="{{ path('app_produit_delete', {id: produit.id}) }}"
+      onsubmit="return confirm('Supprimer ce produit ?');">
+  <input type="hidden" name="_token" value="{{ csrf_token('delete_produit_' ~ produit.id) }}">
+  <button class="btn btn-sm btn-outline-danger">Supprimer</button>
+</form>
+
 {% endblock %}
