@@ -76,6 +76,7 @@ class AppFixtures extends Fixture
         $p1->setLibelleCourt("Guitare qui brille");
         $p1->setDescription("...");
         $p1->setPrixAchat(12.45);
+        $p1->setPhoto("images/produits/guitare_qui_brille.jpg");
         $sr1->addProduit($p1);
         $f1->addProduit($p1);
         $manager->persist($p1);
@@ -84,6 +85,7 @@ class AppFixtures extends Fixture
         $p2->setLibelleCourt("Guitare qui joue vite");
         $p2->setDescription("...");
         $p2->setPrixAchat(12.45);
+        $p2->setPhoto("https://picsum.photos/200/300");
         $sr1->addProduit($p2);
         $f1->addProduit($p2);
         $manager->persist($p2);
@@ -92,6 +94,7 @@ class AppFixtures extends Fixture
         $p3->setLibelleCourt("Guitare qui joue fort");
         $p3->setDescription("...");
         $p3->setPrixAchat(12.45);
+        $p3->setPhoto("https://picsum.photos/200/300");
         $sr1->addProduit($p3);
         $f1->addProduit($p3);
         $manager->persist($p3);

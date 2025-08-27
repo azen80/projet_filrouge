@@ -4,11 +4,18 @@
 
 {% block body %}
 
+
+     {% if panier is empty %}
+    <p>Panier vide.</p>
+    {% endif %}
+
     {% for elt in panier %}
         <div>
         {{ elt.produit.libelleCourt }}
         <br>
         {{ elt.quantite }}
+        <a href="/panier/add/{{ elt.produit.id }}">++</a>
+        <a href="/panier/del/{{ elt.produit.id }}">--</a>
         </div>
         
     {% endfor %}

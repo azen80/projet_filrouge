@@ -3,13 +3,28 @@
 {% block title %}Hello AccueilController!{% endblock %}
 
 {% block body %}
-<h1>{{produit.libelleCourt}}</h1>
 
+
+
+        <div class="col-12 mt-3">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Accueil</a></li>
+                    <li class="breadcrumb-item"><a href="/rubrique/{{produit.sousRubrique.rubrique.id}}"> {{ produit.sousRubrique.rubrique.nomRubrique }}</a></li>
+                    <li class="breadcrumb-item"><a href="/sousrubrique/{{produit.sousRubrique.id}}">{{produit.sousRubrique.nomsousRubrique}}</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{{produit.libelleCourt}}</li>
+                </ol>
+            </nav>
+        </div>
+
+
+
+<h1>{{produit.libelleCourt}}</h1>
 
 <div class="container">
     <div class="row">
         <div>
-            {{ produit.photo }}
+           <img src="{{ asset(produit.photo) }}" alt="{{ produit.libelleCourt}}" class="img-fluid produit-image">
         </div>
 
         <div>

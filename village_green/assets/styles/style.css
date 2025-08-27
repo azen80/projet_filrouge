@@ -1,7 +1,32 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 h1 {
     color:red;
 }
 
 .rubrique img {
     height: 150px;
+}
+
+
+body {
+    background-color: skyblue;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;           
+  object-fit: cover;       
+  object-position: center; 
+  display: block;
+}
+
+
+.produit-image {
+    max-width: 300px;
+    height: auto;
 }

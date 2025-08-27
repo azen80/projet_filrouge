@@ -23,9 +23,9 @@
             <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-2 rubrique mt-3">
                 <a href="/produit/{{ produit.id }}">
                         <div class="card" style="">
-                            <img class="card-img-top img-fluid" src="https://picsum.photos/id/{{sousRubrique.id+50}}/400/200" alt="Card image cap">
+                            <img class="card-img-top img-fluid" src="{{ asset(produit.photo) }}" alt="{{ produit.libelleCourt}}">
                             <div class="card-body">
-                                <h5 class="card-title">{{ sousRubrique.nomsousRubrique }}</h5>
+                                <h5 class="card-title">{{ produit.libelleCourt }}</h5>
                                 <p class="card-text"></p>
                             </div>
                         </div>

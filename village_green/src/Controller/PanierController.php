@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Produit;
+use App\Service\Panier;
 use App\Repository\ProduitRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -12,14 +13,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 final class PanierController extends AbstractController
 {
     #[Route('/panier', name: 'app_panier')]
-    public function index(Request $request, ProduitRepository $repo): Response
+    public function index(Panier $panier, ProduitRepository $repo): Response
     {
         $panier_complet = [];
-        $session = $request->getSession();
-
-        $panier = $session->get('panier', []);
         
-        foreach ($panier as $id => $quantite) {
+        
+        
+        foreach ($panier->liste() as $id => $quantite) {
 
             $produit = $repo->find($id);
             $panier_complet[] = [
@@ -27,7 +27,6 @@ final class PanierController extends AbstractController
                 'quantite' => $quantite
             ];
         }
-
 
         return $this->render('panier/index.html.twig', [
             'controller_name' => 'PanierController',
@@ -40,19 +39,10 @@ final class PanierController extends AbstractController
     
 
     #[Route('/panier/add/{produit}', name: 'app_panier_add')]
-    public function add(Produit $produit, Request $request): Response
+    public function add(Produit $produit, Panier $panier): Response
     {
-        $session = $request->getSession();
-
-        $panier = $session->get('panier', []);
-
-        if (isset($panier[$produit->getId()]))
-            $panier[$produit->getId()]++;
-        else
-            $panier[$produit->getId()] = 1;
-
-
-        $session->set('panier', $panier);
+        
+        $panier->add($produit->getId());
 
         return $this->redirectToRoute('app_panier');
     }
@@ -61,26 +51,26 @@ final class PanierController extends AbstractController
 
 
     #[Route('/panier/del/{produit}', name: 'app_panier_del')]
-    public function del(Produit $produit, Request $request): Response
+    public function del(Produit $produit, Panier $panier): Response
+    {
+       
+        $panier->del($produit->getId());
+
+        return $this->redirectToRoute('app_panier');
+    }
+
+
+
+
+    #[Route('/panier/clear', name: 'app_panier_clear')]
+    public function clear(Request $request): Response
     {
         $session = $request->getSession();
-
-        $panier = $session->get('panier', []);
-
-        if (isset($panier[$produit->getId()])) {
-
-        
-            $panier[$produit->getId()]--;
-
-            if ($panier[$produit->getId()] == 0) {
-                unset($panier[$produit->getId()]);
-            }
-
-        }
-
-
-        $session->set('panier', $panier);
+        $session->remove('panier');
 
         return $this->redirectToRoute('app_panier');
     }
 }
+
+
+
