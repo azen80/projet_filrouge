@@ -116,4 +116,17 @@ final class AccueilController extends AbstractController
         ]);
     }
 
+
+
+    #[Route('/search', name: 'app_search')]
+    public function search(Request $request): Response
+    {
+        $query = $request->query->get('search'); 
+
+        dd($query);
+    }
 }
+
+
+
+

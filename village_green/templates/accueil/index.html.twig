@@ -1,33 +1,3 @@
-{#
-
-{% extends 'base.html.twig' %}
-
-{% block title %}Hello AccueilController!{% endblock %}
-
-{% block body %}
-<h1>Accueil</h1>
-
-
-<div class="container">
-    <div class="row">
-        {% for rubrique in rubriques %}
-            
-                <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-2 rubrique mt-3">
-                    <a href="/rubrique/{{ rubrique.id }}">
-                        <img src="{{rubrique.photo}}" alt="">
-                        {{ rubrique.nomRubrique }}
-                    </a>
-                </div>
-            
-        {% endfor %}
-    </div>
-</div>
-{% endblock %}  #}
-
-
-
-
-
 {% extends 'base.html.twig' %}
 
 {% block title %}Hello AccueilController!{% endblock %}
@@ -37,7 +7,7 @@
         <div class="col-12 mt-3">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/">Accueil</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Accueil</li>
                 </ol>
             </nav>
         </div>
