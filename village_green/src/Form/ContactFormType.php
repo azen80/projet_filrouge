@@ -34,9 +34,9 @@ class ContactFormType extends AbstractType
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            // Configure your form options here
+            
             'attr' => [
-                'novalidate' => 'novalidate', // comment me to reactivate the html5 validation!  🚥
+                'novalidate' => 'novalidate',
             ]
         ]);
     }

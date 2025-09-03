@@ -12,9 +12,9 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-final class TestController extends AbstractController
+final class ProduitNewController extends AbstractController
 {
-    #[Route('/test', name: 'app_produit_new')]
+    #[Route('/produit/new', name: 'app_produit_new')]
     public function new(Request $request, EntityManagerInterface $manager): Response
     {
         $produit = new Produit();

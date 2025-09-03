@@ -34,7 +34,6 @@ final class AccueilController extends AbstractController
     #[Route('/rubrique/{rubrique}', name: 'app_rubrique')]
     public function rubrique(Rubrique $rubrique): Response
     {
-        // dd($rubrique);
 
         return $this->render('accueil/rubrique.html.twig', [
             'controller_name' => 'AccueilController',
@@ -54,7 +53,7 @@ final class AccueilController extends AbstractController
     }
 
 
-    #[Route('/produit/{produit}', name: 'app_produit')]
+    #[Route('/produit/{produit}', name: 'app_produit', requirements: ['produit' => '\d+'])]
     public function produit(Produit $produit): Response
     {
 
@@ -105,11 +104,6 @@ final class AccueilController extends AbstractController
 
             return $this->redirectToRoute('app_accueil');
         }
-
-
-
-
-
         return $this->render('accueil/contact.html.twig', [
             'controller_name' => 'AccueilController',
             'form' => $form
