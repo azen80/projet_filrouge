@@ -2,17 +2,41 @@
 
 namespace App\DataFixtures;
 
-use App\Entity\Fournisseur;
+use App\Entity\User;
 use App\Entity\Produit;
 use App\Entity\Rubrique;
+use App\Entity\Fournisseur;
 use App\Entity\SousRubrique;
-use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
+use Doctrine\Bundle\FixturesBundle\Fixture;
+use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class AppFixtures extends Fixture
 {
+    private $hasher;
+    public function __construct(UserPasswordHasherInterface $hasher)
+    {
+        $this->hasher = $hasher;
+    }
+
     public function load(ObjectManager $manager): void
     {
+
+        $u1 = new User();
+        $u1->setEmail("test@test.com");
+        $password = $this->hasher->hashPassword($u1, "1234");
+        $u1->setPassword($password);
+        $u1->setRoles(["ROLE_USER"]);
+        $manager->persist($u1);
+
+        $u2 = new User();
+        $u2->setEmail("admin@test.com");
+        $password = $this->hasher->hashPassword($u2, "1234");
+        $u2->setPassword($password);
+        $u2->setRoles(["ROLE_ADMIN"]);
+        $manager->persist($u2);
+
+
         $f1 = new Fournisseur();
         $f1->setNom("Yamaha");
         $manager->persist($f1);

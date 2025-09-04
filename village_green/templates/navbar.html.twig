@@ -20,6 +20,14 @@
       </ul>
 
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item d-flex me-4">
+          {% if app.user %}
+            <span class="nav-link pe-none">({{app.user.email}}) </span>
+            <a class="nav-link" href="/logout">Logout</a>
+          {% else %}
+            <a class="nav-link" href="/login">Login</a>
+          {% endif %}
+        </li>
         <li class="nav-item me-4">
           <a class="nav-link" aria-current="page" href="{{ path('app_contact')}}">Contact</a>
         </li>
