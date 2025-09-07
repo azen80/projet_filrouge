@@ -23,9 +23,9 @@
         <li class="nav-item d-flex me-4">
           {% if app.user %}
             <span class="nav-link pe-none">({{app.user.email}}) </span>
-            <a class="nav-link" href="/logout">Logout</a>
+            <a class="nav-link" href="/logout">Déconnexion</a>
           {% else %}
-            <a class="nav-link" href="/login">Login</a>
+            <a class="nav-link" href="/login">Connexion</a>
           {% endif %}
         </li>
         <li class="nav-item me-4">

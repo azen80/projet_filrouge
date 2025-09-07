@@ -40,11 +40,13 @@
     </div>
 </div>
 
-<form method="post"
-      action="{{ path('app_produit_delete', {id: produit.id}) }}"
-      onsubmit="return confirm('Supprimer ce produit ?');">
+{% if is_granted ('ROLE_ADMIN') %}
+
+<form method="post" action="{{ path('app_produit_delete', {id: produit.id}) }}" onsubmit="return confirm('Supprimer ce produit ?');">
   <input type="hidden" name="_token" value="{{ csrf_token('delete_produit_' ~ produit.id) }}">
   <button class="btn btn-sm btn-outline-danger">Supprimer</button>
 </form>
+
+{% endif %}
 
 {% endblock %}

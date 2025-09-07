@@ -76,3 +76,8 @@ body {
     max-width: 300px;
     height: auto;
 }
+
+
+.imgcard {
+    object-fit: contain;
+}

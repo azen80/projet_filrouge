@@ -13,10 +13,10 @@
         </div>
 
         {% for rubrique in rubriques %}
-            <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-2 rubrique mt-3">
+            <div class="col-12 col-sm-6 col-md-4 rubrique mt-3">
                 <a href="/rubrique/{{ rubrique.id }}">
-                        <div class="card" style="">
-                            <img class="card-img-top img-fluid" src="https://picsum.photos/id/{{rubrique.id+50}}/400/200" alt="Card image cap">
+                        <div class="card" >
+                            <img class="card-img-top img-fluid imgcard" src="{{ asset(rubrique.photo) }}" alt="{{ rubrique.nomRubrique}}" class="img-fluid produit-image">
                             <div class="card-body">
                                 <h5 class="card-title">{{ rubrique.nomRubrique }}</h5>
                                 <p class="card-text"></p>
