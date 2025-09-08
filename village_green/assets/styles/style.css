@@ -24,17 +24,15 @@
     background-color: #004304;
     border-radius: 30px;
     width:400px;
-
+    color:#fff;
 }
 
 
 
 .search-input{
   background-color:#004304;
-  color:#fff;
   border-radius:30px;
   border:1px solid rgba(255,255,255,.25);
-
   background-repeat:no-repeat;
   background-position:12px center;
   background-size:16px 16px;

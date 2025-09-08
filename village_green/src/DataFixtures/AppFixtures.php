@@ -247,6 +247,66 @@ class AppFixtures extends Fixture
         $manager->persist($p3);
 
 
+        
+        $p4 = new Produit();
+        $p4->setLibelleCourt("SD25 Prodipe");
+        $p4->setDescription("...");
+        $p4->setPrixAchat(189.00);
+        $p4->setPhoto("images/produits/SD25.png");
+        $sr2->addProduit($p4);
+        $f1->addProduit($p4);
+        $manager->persist($p4);
+
+        $p5 = new Produit();
+        $p5->setLibelleCourt("CGS102AII Yamaha");
+        $p5->setDescription("...");
+        $p5->setPrixAchat(139.00);
+        $p5->setPhoto("images/produits/CGS102AII.jpg");
+        $sr2->addProduit($p5);
+        $f1->addProduit($p5);
+        $manager->persist($p5);
+
+        $p6 = new Produit();
+        $p6->setLibelleCourt("CD-60 V2 Fender");
+        $p6->setDescription("...");
+        $p6->setPrixAchat(150.00);
+        $p6->setPhoto("images/produits/CD-60.jpg");
+        $sr2->addProduit($p6);
+        $f1->addProduit($p6);
+        $manager->persist($p6);
+
+
+
+        $p7 = new Produit();
+        $p7->setLibelleCourt("VC204 Valencia");
+        $p7->setDescription("...");
+        $p7->setPrixAchat(99.00);
+        $p7->setPhoto("images/produits/VC204.jpg");
+        $sr3->addProduit($p7);
+        $f1->addProduit($p7);
+        $manager->persist($p7);
+
+        $p8 = new Produit();
+        $p8->setLibelleCourt("CUENCA 5");
+        $p8->setDescription("...");
+        $p8->setPrixAchat(319.00);
+        $p8->setPhoto("images/produits/cuenca.jpg");
+        $sr3->addProduit($p8);
+        $f1->addProduit($p8);
+        $manager->persist($p8);
+
+        $p9 = new Produit();
+        $p9->setLibelleCourt("C40 III Yamaha");
+        $p9->setDescription("...");
+        $p9->setPrixAchat(149.00);
+        $p9->setPhoto("images/produits/C40.jpg");
+        $sr3->addProduit($p9);
+        $f1->addProduit($p9);
+        $manager->persist($p9);
+
+
+
+
         $manager->flush();
     }
 }

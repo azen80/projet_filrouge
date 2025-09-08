@@ -18,7 +18,7 @@
 <h1>{{ rubrique.nomRubrique }}</h1>
 
         {% for sousRubrique in rubrique.sousRubriques %}
-            <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-2 rubrique mt-3">
+           <div class="col-12 col-sm-6 col-md-4 rubrique mt-3">
                 <a href="/sousrubrique/{{ sousRubrique.id }}">
                         <div class="card" style="">
                             <img class="card-img-top img-fluid imgcard" src="{{ asset(sousRubrique.photo) }}" alt="{{ sousRubrique.nomsousRubrique}}" class="img-fluid produit-image">

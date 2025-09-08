@@ -20,7 +20,7 @@
 <h1>{{ sousRubrique.nomsousRubrique }}</h1>
 
         {% for produit in sousRubrique.produits %}
-            <div class="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-2 rubrique mt-3">
+            <div class="col-12 col-sm-6 col-md-4 rubrique mt-3">
                 <a href="/produit/{{ produit.id }}">
                         <div class="card" style="">
                             <img class="card-img-top img-fluid imgcard" src="{{ asset(produit.photo ?: 'images/placeholder.png') }}" alt="{{ produit.libelleCourt}}">
