@@ -42,6 +42,11 @@ class AppFixtures extends Fixture
         $manager->persist($f1);
 
 
+        $f2 = new Fournisseur();
+        $f2->SetNom("Hohner");
+        $manager->persist($f2);
+
+
         $r1 = new Rubrique();
         $r1->setNomRubrique("Guitares");
         $r1->setPhoto(photo: "images/rubriques/guitares.webp");
@@ -218,7 +223,7 @@ class AppFixtures extends Fixture
 
 
 
-
+        #guitares électriques
         $p1 = new Produit();
         $p1->setLibelleCourt("GIBSON 60s Figured Top Bourbon Burst");
         $p1->setDescription("...");
@@ -247,7 +252,7 @@ class AppFixtures extends Fixture
         $manager->persist($p3);
 
 
-        
+        #guitares acoustiques
         $p4 = new Produit();
         $p4->setLibelleCourt("SD25 Prodipe");
         $p4->setDescription("...");
@@ -276,7 +281,7 @@ class AppFixtures extends Fixture
         $manager->persist($p6);
 
 
-
+        #guitares classiques
         $p7 = new Produit();
         $p7->setLibelleCourt("VC204 Valencia");
         $p7->setDescription("...");
@@ -306,6 +311,413 @@ class AppFixtures extends Fixture
 
 
 
+        # piano acoustique
+        $p10 = new Produit();
+        $p10->setLibelleCourt("Yamaha B2");
+        $p10->setDescription("...");
+        $p10->setPrixAchat(5290.00);
+        $p10->setPhoto("images/produits/pianoacou1.webp");
+        $sr4->addProduit($p10);
+        $f1->addProduit($p10);
+        $manager->persist($p10);
+
+        $p11 = new Produit();
+        $p11->setLibelleCourt("SHIGERU KAWAI SK2");
+        $p11->setDescription("...");
+        $p11->setPrixAchat(48990.00);
+        $p11->setPhoto("images/produits/pianoacou2.jpg");
+        $sr4->addProduit($p11);
+        $f1->addProduit($p11);
+        $manager->persist($p11);
+
+        $p12 = new Produit();
+        $p12->setLibelleCourt("PLEYEL DROIT P120-BLK");
+        $p12->setDescription("...");
+        $p12->setPrixAchat(8990.00);
+        $p12->setPhoto("images/produits/pianoacou3.jpg");
+        $sr4->addProduit($p12);
+        $f1->addProduit($p12);
+        $manager->persist($p12);
+
+
+
+        #piano numérique
+        $p13 = new Produit();
+        $p13->setLibelleCourt("KORG B2");
+        $p13->setDescription("...");
+        $p13->setPrixAchat(415.00);
+        $p13->setPhoto("images/produits/pianonum1.jpg");
+        $sr5->addProduit($p13);
+        $f1->addProduit($p13);
+        $manager->persist($p13);
+
+        $p14 = new Produit();
+        $p14->setLibelleCourt("OURA S100");
+        $p14->setDescription("...");
+        $p14->setPrixAchat(459.99);
+        $p14->setPhoto("images/produits/pianonum2.webp");
+        $sr5->addProduit($p14);
+        $f1->addProduit($p14);
+        $manager->persist($p14);
+
+        $p15 = new Produit();
+        $p15->setLibelleCourt("ROLAND GP3");
+        $p15->setDescription("...");
+        $p15->setPrixAchat(3190.00);
+        $p15->setPhoto("images/produits/pianonum3.jpg");
+        $sr5->addProduit($p15);
+        $f1->addProduit($p15);
+        $manager->persist($p15);
+
+
+
+
+        #orgues
+        $p16 = new Produit();
+        $p16->setLibelleCourt("Johannus Studio 260");
+        $p16->setDescription("...");
+        $p16->setPrixAchat(5979.00);
+        $p16->setPhoto("images/produits/orgue1.jpg");
+        $sr6->addProduit($p16);
+        $f1->addProduit($p16);
+        $manager->persist($p16);
+
+        $p17 = new Produit();
+        $p17->setLibelleCourt("Viscount Unico CLV 8 Konkav");
+        $p17->setDescription("...");
+        $p17->setPrixAchat(15690.00);
+        $p17->setPhoto("images/produits/orgue2.jpg");
+        $sr6->addProduit($p17);
+        $f1->addProduit($p17);
+        $manager->persist($p17);
+
+        $p18 = new Produit();
+        $p18->setLibelleCourt("Viscount Chorum 10");
+        $p18->setDescription("...");
+        $p18->setPrixAchat(3555.00);
+        $p18->setPhoto("images/produits/orgue3.jpg");
+        $sr6->addProduit($p18);
+        $f1->addProduit($p18);
+        $manager->persist($p18);
+
+
+
+
+
+        #flutes
+        $p19 = new Produit();
+        $p19->setLibelleCourt("YAMAHA YRA 302BIII");
+        $p19->setDescription("...");
+        $p19->setPrixAchat(45.00);
+        $p19->setPhoto("images/produits/flute1.jpg");
+        $sr7->addProduit($p19);
+        $f1->addProduit($p19);
+        $manager->persist($p19);
+
+        $p20 = new Produit();
+        $p20->setLibelleCourt("MIYAZAWA PB202-R");
+        $p20->setDescription("...");
+        $p20->setPrixAchat(3259.00);
+        $p20->setPhoto("images/produits/flute2.jpg");
+        $sr7->addProduit($p20);
+        $f1->addProduit($p20);
+        $manager->persist($p20);
+
+        $p21 = new Produit();
+        $p21->setLibelleCourt("MOECK ROTTENBURGH 4208");
+        $p21->setDescription("...");
+        $p21->setPrixAchat(475.00);
+        $p21->setPhoto("images/produits/flute3.jpg");
+        $sr7->addProduit($p21);
+        $f1->addProduit($p21);
+        $manager->persist($p21);
+
+
+
+
+        #trompettes
+        $p22 = new Produit();
+        $p22->setLibelleCourt("YAMAHA YTR 3335");
+        $p22->setDescription("...");
+        $p22->setPrixAchat(829.00);
+        $p22->setPhoto("images/produits/trompette1.jpg");
+        $sr8->addProduit($p22);
+        $f1->addProduit($p22);
+        $manager->persist($p22);
+
+        $p23 = new Produit();
+        $p23->setLibelleCourt("SML TP50");
+        $p23->setDescription("...");
+        $p23->setPrixAchat(339.00);
+        $p23->setPhoto("images/produits/trompette2.png");
+        $sr8->addProduit($p23);
+        $f1->addProduit($p23);
+        $manager->persist($p23);
+
+        $p24 = new Produit();
+        $p24->setLibelleCourt("JUPITER JTR701Q");
+        $p24->setDescription("...");
+        $p24->setPrixAchat(598.00);
+        $p24->setPhoto("images/produits/trompette3.jpg");
+        $sr8->addProduit($p24);
+        $f1->addProduit($p24);
+        $manager->persist($p24);
+
+
+
+
+        #trombones
+        $p25 = new Produit();
+        $p25->setLibelleCourt("ZAMASS");
+        $p25->setDescription("...");
+        $p25->setPrixAchat(4152.84);
+        $p25->setPhoto("images/produits/trombone1.jpg");
+        $sr9->addProduit($p25);
+        $f1->addProduit($p25);
+        $manager->persist($p25);
+
+        $p26 = new Produit();
+        $p26->setLibelleCourt("XENO YSL-882 O");
+        $p26->setDescription("...");
+        $p26->setPrixAchat(4419.00);
+        $p26->setPhoto("images/produits/trombone2.jpg");
+        $sr9->addProduit($p26);
+        $f1->addProduit($p26);
+        $manager->persist($p26);
+
+        $p27 = new Produit();
+        $p27->setLibelleCourt("EASTMAN ETB 420");
+        $p27->setDescription("...");
+        $p27->setPrixAchat(735.54);
+        $p27->setPhoto("images/produits/trombone3.jpg");
+        $sr9->addProduit($p27);
+        $f1->addProduit($p27);
+        $manager->persist($p27);
+
+
+
+
+
+
+        #harmonicas
+        $p28 = new Produit();
+        $p28->setLibelleCourt("Hohner Chromonica 12");
+        $p28->setDescription("...");
+        $p28->setPrixAchat(229.50);
+        $p28->setPhoto("images/produits/harmonica1.jpg");
+        $sr10->addProduit($p28);
+        $f2->addProduit($p28);
+        $manager->persist($p28);
+
+        $p29 = new Produit();
+        $p29->setLibelleCourt("Hohner Amadeus 12");
+        $p29->setDescription("...");
+        $p29->setPrixAchat(1100.00);
+        $p29->setPhoto("images/produits/harmonica2.jpg");
+        $sr10->addProduit($p29);
+        $f2->addProduit($p29);
+        $manager->persist($p29);
+
+        $p30 = new Produit();
+        $p30->setLibelleCourt("Hohner Marine Band 10");
+        $p30->setDescription("...");
+        $p30->setPrixAchat(37.00);
+        $p30->setPhoto("images/produits/harmonica3.jpg");
+        $sr10->addProduit($p30);
+        $f2->addProduit($p30);
+        $manager->persist($p30);
+
+        
+
+
+
+        #batteries
+        $p31 = new Produit();
+        $p31->setLibelleCourt("KESHUO");
+        $p31->setDescription("...");
+        $p31->setPrixAchat(3927.62);
+        $p31->setPhoto("images/produits/batterie1.jpg");
+        $sr11->addProduit($p31);
+        $f1->addProduit($p31);
+        $manager->persist($p31);
+
+        $p32 = new Produit();
+        $p32->setLibelleCourt("PEARL export");
+        $p32->setDescription("...");
+        $p32->setPrixAchat(1089.00);
+        $p32->setPhoto("images/produits/batterie2.jpg");
+        $sr11->addProduit($p32);
+        $f1->addProduit($p32);
+        $manager->persist($p32);
+
+        $p33 = new Produit();
+        $p33->setLibelleCourt("Yamaha Rydeen Standard");
+        $p33->setDescription("...");
+        $p33->setPrixAchat(879.00);
+        $p33->setPhoto("images/produits/batterie3.jpg");
+        $sr11->addProduit($p33);
+        $f1->addProduit($p33);
+        $manager->persist($p33);
+
+
+
+
+        #percussion manuelle
+        $p34 = new Produit();
+        $p34->setLibelleCourt("Bongo Aspire LPA601");
+        $p34->setDescription("...");
+        $p34->setPrixAchat(162.00);
+        $p34->setPhoto("images/produits/percumanu1.jpg");
+        $sr12->addProduit($p34);
+        $f1->addProduit($p34);
+        $manager->persist($p34);
+
+        $p35 = new Produit();
+        $p35->setLibelleCourt("Bongo WB100DX:523");
+        $p35->setDescription("...");
+        $p35->setPrixAchat(270.00);
+        $p35->setPhoto("images/produits/percumanu2.jpg");
+        $sr12->addProduit($p35);
+        $f1->addProduit($p35);
+        $manager->persist($p35);
+
+        $p36 = new Produit();
+        $p36->setLibelleCourt("Pearl PWC-302DX");
+        $p36->setDescription("...");
+        $p36->setPrixAchat(775.00);
+        $p36->setPhoto("images/produits/percumanu3.jpg");
+        $sr12->addProduit($p36);
+        $f1->addProduit($p36);
+        $manager->persist($p36);
+
+
+
+
+
+        #percussion mélodique
+        $p37 = new Produit();
+        $p37->setLibelleCourt("Thomann THM3.0 Marimba");
+        $p37->setDescription("...");
+        $p37->setPrixAchat(498.00);
+        $p37->setPhoto("images/produits/percumelo1.jpg");
+        $sr13->addProduit($p37);
+        $f1->addProduit($p37);
+        $manager->persist($p37);
+
+        $p38 = new Produit();
+        $p38->setLibelleCourt("Thomann MSPVT43 Marimba");
+        $p38->setDescription("...");
+        $p38->setPrixAchat(2898.00);
+        $p38->setPhoto("images/produits/percumelo2.jpg");
+        $sr13->addProduit($p38);
+        $f1->addProduit($p38);
+        $manager->persist($p38);
+
+        $p39 = new Produit();
+        $p39->setLibelleCourt("Goldon Alto Xylophone 10210");
+        $p39->setDescription("...");
+        $p39->setPrixAchat(294.00);
+        $p39->setPhoto("images/produits/percumelo3.jpg");
+        $sr13->addProduit($p39);
+        $f1->addProduit($p39);
+        $manager->persist($p39);
+
+
+
+
+
+
+        #violons
+        $p40 = new Produit();
+        $p40->setLibelleCourt("Stentor SR1500");
+        $p40->setDescription("...");
+        $p40->setPrixAchat(229.00);
+        $p40->setPhoto("images/produits/violon1.jpg");
+        $sr14->addProduit($p40);
+        $f1->addProduit($p40);
+        $manager->persist($p40);
+
+        $p41 = new Produit();
+        $p41->setLibelleCourt("Roth & Junius RJV-A");
+        $p41->setDescription("...");
+        $p41->setPrixAchat(226.00);
+        $p41->setPhoto("images/produits/violon2.jpg");
+        $sr14->addProduit($p41);
+        $f1->addProduit($p41);
+        $manager->persist($p41);
+
+        $p42 = new Produit();
+        $p42->setLibelleCourt("Karl Hôfner Presto 4/4");
+        $p42->setDescription("...");
+        $p42->setPrixAchat(1066.00);
+        $p42->setPhoto("images/produits/violon3.jpg");
+        $sr14->addProduit($p42);
+        $f1->addProduit($p42);
+        $manager->persist($p42);
+
+
+
+
+        #violoncelle
+        $p43 = new Produit();
+        $p43->setLibelleCourt("Luca Zerilli Cello");
+        $p43->setDescription("...");
+        $p43->setPrixAchat(23590.00);
+        $p43->setPhoto("images/produits/violoncelle1.jpg");
+        $sr15->addProduit($p43);
+        $f1->addProduit($p43);
+        $manager->persist($p43);
+
+        $p44 = new Produit();
+        $p44->setLibelleCourt("Stentor SR1108 Cello");
+        $p44->setDescription("...");
+        $p44->setPrixAchat(869.00);
+        $p44->setPhoto("images/produits/violoncelle2.jpg");
+        $sr15->addProduit($p44);
+        $f1->addProduit($p44);
+        $manager->persist($p44);
+
+        $p45 = new Produit();
+        $p45->setLibelleCourt("Roth & Junius Europ Cello");
+        $p45->setDescription("...");
+        $p45->setPrixAchat(1269.00);
+        $p45->setPhoto("images/produits/violoncelle3.jpg");
+        $sr15->addProduit($p45);
+        $f1->addProduit($p45);
+        $manager->persist($p45);
+
+
+
+
+
+
+        #alto
+        $p46 = new Produit();
+        $p46->setLibelleCourt("Thomann Sudent Pro Viola 15");
+        $p46->setDescription("...");
+        $p46->setPrixAchat(159.00);
+        $p46->setPhoto("images/produits/alto1.jpg");
+        $sr16->addProduit($p46);
+        $f1->addProduit($p46);
+        $manager->persist($p46);
+
+        $p47 = new Produit();
+        $p47->setLibelleCourt("Gewa Germania Viola 16.5");
+        $p47->setDescription("...");
+        $p47->setPrixAchat(1298.00);
+        $p47->setPhoto("images/produits/alto2.jpg");
+        $sr16->addProduit($p47);
+        $f1->addProduit($p47);
+        $manager->persist($p47);
+
+        $p48 = new Produit();
+        $p48->setLibelleCourt("Yamaha VA5S Alto 16");
+        $p48->setDescription("...");
+        $p48->setPrixAchat(595.00);
+        $p48->setPhoto("images/produits/alto3.png");
+        $sr16->addProduit($p48);
+        $f1->addProduit($p48);
+        $manager->persist($p48);
 
         $manager->flush();
     }
