@@ -6,39 +6,32 @@
 
 
 
-        <div class="col-12 mt-3">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/">Accueil</a></li>
-                    <li class="breadcrumb-item"><a href="/rubrique/{{produit.sousRubrique.rubrique.id}}"> {{ produit.sousRubrique.rubrique.nomRubrique }}</a></li>
-                    <li class="breadcrumb-item"><a href="/sousrubrique/{{produit.sousRubrique.id}}">{{produit.sousRubrique.nomsousRubrique}}</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">{{produit.libelleCourt}}</li>
-                </ol>
-            </nav>
-        </div>
-
-
+<div class="col-12 mt-3">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Accueil</a></li>
+            <li class="breadcrumb-item"><a href="/rubrique/{{produit.sousRubrique.rubrique.id}}"> {{ produit.sousRubrique.rubrique.nomRubrique }}</a></li>
+            <li class="breadcrumb-item"><a href="/sousrubrique/{{produit.sousRubrique.id}}">{{produit.sousRubrique.nomsousRubrique}}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{produit.libelleCourt}}</li>
+        </ol>
+    </nav>
+</div>
 
 <h1>{{produit.libelleCourt}}</h1>
 
-<div class="container">
-    <div class="row">
-        <div>
-           <img src="{{ asset(produit.photo) }}" alt="{{ produit.libelleCourt}}" class="img-fluid produit-image">
-        </div>
+<div class="card" style="width: 18rem;">
+<img class="card-img-top" src="{{ asset(produit.photo) }}" alt="{{ produit.libelleCourt }}">
+<div class="card-body">
+    <h5 class="card-title">{{ produit.libelleCourt }}</h5>
+    <h5 class="card-title">{{ produit.prixAchat }}</h5>
+    <p class="card-text">{{ produit.description }}</p>
+    <a href="/panier/add/{{produit.id}}" class="btn btn-primary">Ajouter au panier</a>
+</div>
+</div>
         
 
 
-        <div>
-            {{ produit.description }}
-        </div>
 
-        <div>
-            {{ produit.prixAchat }}
-        </div>
-        <a href="/panier/add/{{produit.id}}">Ajouter au panier</a>
-    </div>
-</div>
 
 {% if is_granted ('ROLE_ADMIN') %}
 

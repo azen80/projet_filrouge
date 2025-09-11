@@ -46,6 +46,10 @@ class AppFixtures extends Fixture
         $f2->SetNom("Hohner");
         $manager->persist($f2);
 
+        $f3 = new Fournisseur();
+        $f3->SetNOm("Roland");
+        $manager->persist($f3);
+
 
         $r1 = new Rubrique();
         $r1->setNomRubrique("Guitares");
@@ -718,6 +722,140 @@ class AppFixtures extends Fixture
         $sr16->addProduit($p48);
         $f1->addProduit($p48);
         $manager->persist($p48);
+
+
+
+
+        #harpes
+        $p49 = new Produit();
+        $p49->setLibelleCourt("Classic Cantabile H-29");
+        $p49->setDescription("...");
+        $p49->setPrixAchat(479.00);
+        $p49->setPhoto("images/produits/harpe1.jpg");
+        $sr17->addProduit($p49);
+        $f1->addProduit($p49);
+        $manager->persist($p49);
+
+        $p50 = new Produit();
+        $p50->setLibelleCourt("Thomann SQB 29");
+        $p50->setDescription("...");
+        $p50->setPrixAchat(555.00);
+        $p50->setPhoto("images/produits/harpe2.jpg");
+        $sr17->addProduit($p50);
+        $f1->addProduit($p50);
+        $manager->persist($p50);
+
+        $p51 = new Produit();
+        $p51->setLibelleCourt("Salvi Titan Mahogany");
+        $p51->setDescription("...");
+        $p51->setPrixAchat(2790.00);
+        $p51->setPhoto("images/produits/harpe3.jpg");
+        $sr17->addProduit($p51);
+        $f1->addProduit($p51);
+        $manager->persist($p51);
+
+
+
+
+
+
+
+
+
+
+        #synthés
+        $p52 = new Produit();
+        $p52->setLibelleCourt("Oberheim TEO-5");
+        $p52->setDescription("...");
+        $p52->setPrixAchat(1379.00);
+        $p52->setPhoto("images/produits/synthes1.jpg");
+        $sr18->addProduit($p52);
+        $f1->addProduit($p52);
+        $manager->persist($p52);
+
+        $p53 = new Produit();
+        $p53->setLibelleCourt("AKAI Professional MPK mini MK3");
+        $p53->setDescription("...");
+        $p53->setPrixAchat(109.00);
+        $p53->setPhoto("images/produits/synthes2.jpg");
+        $sr18->addProduit($p53);
+        $f1->addProduit($p53);
+        $manager->persist($p53);
+
+        $p54 = new Produit();
+        $p54->setLibelleCourt("Moog Messenger");
+        $p54->setDescription("...");
+        $p54->setPrixAchat(791.00);
+        $p54->setPhoto("images/produits/synthes3.jpg");
+        $sr18->addProduit($p54);
+        $f1->addProduit($p54);
+        $manager->persist($p54);
+
+
+
+
+        #keytar
+        $p55 = new Produit();
+        $p55->setLibelleCourt("Alesis Vortex Wireless 2");
+        $p55->setDescription("...");
+        $p55->setPrixAchat(239.00);
+        $p55->setPhoto("images/produits/keytar1.jpg");
+        $sr19->addProduit($p55);
+        $f1->addProduit($p55);
+        $manager->persist($p55);
+
+        $p56 = new Produit();
+        $p56->setLibelleCourt("Roland AX-Edge WHite");
+        $p56->setDescription("...");
+        $p56->setPrixAchat(935.00);
+        $p56->setPhoto("images/produits/keytar2.jpg");
+        $sr19->addProduit($p56);
+        $f3->addProduit($p56);
+        $manager->persist($p56);
+
+        $p57 = new Produit();
+        $p57->setLibelleCourt("Korg RK-100S 2 Red");
+        $p57->setDescription("...");
+        $p57->setPrixAchat(699.00);
+        $p57->setPhoto("images/produits/keytar3.jpg");
+        $sr19->addProduit($p57);
+        $f1->addProduit($p57);
+        $manager->persist($p57);
+
+
+
+
+        #pads
+        $p58 = new Produit();
+        $p58->setLibelleCourt("Roland SPD-SX PRO Sampling");
+        $p58->setDescription("...");
+        $p58->setPrixAchat(825.00);
+        $p58->setPhoto("images/produits/pads1.jpg");
+        $sr20->addProduit($p58);
+        $f3->addProduit($p58);
+        $manager->persist($p58);
+
+        $p59 = new Produit();
+        $p59->setLibelleCourt("Yamaha FGDP-50");
+        $p59->setDescription("...");
+        $p59->setPrixAchat(288.00);
+        $p59->setPhoto("images/produits/pads2.jpg");
+        $sr20->addProduit($p59);
+        $f1->addProduit($p59);
+        $manager->persist($p59);
+
+        $p60 = new Produit();
+        $p60->setLibelleCourt("Millenium NonaPad");
+        $p60->setDescription("...");
+        $p60->setPrixAchat(222.00);
+        $p60->setPhoto("images/produits/pads3.jpg");
+        $sr20->addProduit($p60);
+        $f1->addProduit($p60);
+        $manager->persist($p60);
+
+
+
+
 
         $manager->flush();
     }
