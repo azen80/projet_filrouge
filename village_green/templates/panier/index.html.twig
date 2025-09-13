@@ -10,6 +10,13 @@
     {% endif %}
 
     {% for elt in panier %}
+
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top imgcard" src="{{ asset(elt.produit.photo) }}" alt="{{ elt.produit.libelleCourt }}">
+
+</div>
+
+    
         <div>
         {{ elt.produit.libelleCourt }}
         <br>

@@ -20,13 +20,13 @@
 <h1>{{produit.libelleCourt}}</h1>
 
 <div class="card" style="width: 18rem;">
-<img class="card-img-top" src="{{ asset(produit.photo) }}" alt="{{ produit.libelleCourt }}">
-<div class="card-body">
-    <h5 class="card-title">{{ produit.libelleCourt }}</h5>
-    <h5 class="card-title">{{ produit.prixAchat }}</h5>
-    <p class="card-text">{{ produit.description }}</p>
-    <a href="/panier/add/{{produit.id}}" class="btn btn-primary">Ajouter au panier</a>
-</div>
+    <img class="card-img-top imgcard" src="{{ asset(produit.photo) }}" alt="{{ produit.libelleCourt }}">
+    <div class="card-body">
+        <h5 class="card-title">{{ produit.libelleCourt }}</h5>
+        <h5 class="card-title">{{ produit.prixAchat }}</h5>
+        <p class="card-text">{{ produit.description }}</p>
+        <a href="/panier/add/{{produit.id}}" class="btn btn-primary">Ajouter au panier</a>
+    </div>
 </div>
         
 
